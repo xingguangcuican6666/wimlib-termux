@@ -1,0 +1,13 @@
+prefix=/data/data/com.termux/files/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: wimlib
+Description: Library to extract, create, modify, and mount Windows Imaging (WIM) files
+URL:  https://wimlib.net
+Version: 1.14.4-9-g553d4a33
+Libs: -L${libdir} -lwim
+Requires.private:  libntfs-3g fuse
+Libs.private:  -lrt
+Cflags: -I${includedir}
