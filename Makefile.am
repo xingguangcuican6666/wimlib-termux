@@ -259,7 +259,7 @@ wimlib_imagex_cmds =	\
 install-exec-hook:
 	for cmd in $(wimlib_imagex_cmds); do				\
 		cd $(DESTDIR)$(bindir) &&				\
-			ln -f wimlib-imagex wim$${cmd};			\
+			ln -sf wimlib-imagex wim$${cmd};			\
 	done
 
 install-data-hook:
